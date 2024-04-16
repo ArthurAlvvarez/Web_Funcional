@@ -1,0 +1,15 @@
+body {
+    height: 97vh;
+    background: url(Fondo.jpg) no-repeat;
+    background-size: cover;
+}
+
+header {
+    /* background-color: rgb(0, 0, 0); */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 50px;
+}
