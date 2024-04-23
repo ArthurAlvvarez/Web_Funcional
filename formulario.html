@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="fondo">
+    <div class="formulario">
+        
+        <form action="formulario">
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" placeholder="Nombre" required><br><br>
+            <label for="apellido">Apellido</label><br>
+            <input type="text" id="apellido" required><br><br>
+            <label for="correo">Correo Electrónico</label><br>
+            <input type="email" id="email" required><br><br>
+            <label for="contraseña">Contraseña</label><br>
+            <input type="password" id="contraseña" required><br><br>
+            <label for="fecha">Fecha de nacimiento</label><br>
+            <input type="date" id="fecha" required><br><br>
+            <label for="sexo">Sexo</label>
+            <select name="sexo" id="sexo" required>
+                <option value="0">Seleccione...</option>
+                <option value="1">Hombre</option>
+                <option value="2">Mujer</option>
+                <option value="3">Otro</option>
+            </select><br><br>
+            <button type="submit" id="submit">Enviar</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
