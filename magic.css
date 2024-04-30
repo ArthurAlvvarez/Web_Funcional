@@ -14,7 +14,16 @@ header {
     height: 50px;
 }
 
-h3{
+.fondo{
     margin-left: 25px; 
     margin-top: 50px;
+    background-color: lightblue;
+    width: 400px;
+    height: 500px;
+    border-radius: 5%;
 }
+.enunciado{
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
