@@ -1,0 +1,10 @@
+body {
+    height: 97vh;
+    background: url(azul.png) no-repeat;
+    background-size: cover;
+    
+}
+.f1{
+    margin-top: 25px;
+    margin-left: 50px;
+}

@@ -14,7 +14,7 @@ header {
     height: 50px;
 }
 
-.fondo{
+.fondo1{
     margin-left: 25px; 
     margin-top: 50px;
     background-color: lightblue;
@@ -22,8 +22,24 @@ header {
     height: 500px;
     border-radius: 5%;
 }
-.enunciado{
+.enunciado1{
     margin-left: 100px;
     margin-top: 10px;
 }
 
+.fondo2{
+    margin-right: 25px; 
+    margin-top: 50px;
+    background-color: lightblue;
+    width: 400px;
+    height: 500px;
+    border-radius: 5%;
+}
+.enunciado2{
+   margin-left: 100px;
+    margin-top: 10px;
+}
+.fondos{
+    display: flex;
+    justify-content: space-between;
+}

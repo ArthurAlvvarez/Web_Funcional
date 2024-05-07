@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sumados.css">
+    <link rel="icon" href="Pi.png" type="image/png">
+</head>
+<body>
+    <div class="f1">
+        <h2>Te digo que palabras tienen 3 o más letras</h2>
+        <input type="text" id="n1" placeholder="Introduce una frase">
+        <button onclick="palabra()">Palabras</button>
+    </div>
+    <hr>
+    <div class="f1">
+        <h2>Te invierto la frase</h2>
+        <input type="text" id="n2" placeholder="Introduce una frase">
+        <button onclick="invertir()">Invertir</button>
+    </div>
+    <hr>
+    <script>
+        function palabra(){
+        var oracion = document.getElementById('n1').value;
+        let palabras = new Array;
+        let palabraslargas = new Array;
+        palabras = oracion.split(" ");
+        for(i = 0; i < palabras.length; i++){
+            if(palabras[i].length >= 3)
+                palabraslargas.push(palabras[i]);
+        }
+        alert(palabraslargas);
+        }
+
+        function invertir(){
+            var oracion = document.getElementById('n2').value;
+            let reverso = "";
+            for(i = oracion.length; i >= 0; i--){
+            reverso += oracion.charAt(i);
+        }
+        alert(reverso);
+        }
+    </script>
+</body>
+</html>
