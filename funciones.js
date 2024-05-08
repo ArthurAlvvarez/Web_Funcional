@@ -161,11 +161,11 @@ function imprime_paresoimpares(num,par){
 
 function media_aritmetica (array){
     var num = new Array;
-    num = array.split(",");
+    num = array.split(" ");
     var temp = 0;
     var resultado = 0;
     for(i = 0; i < num.length;i++){
-        temp += num[i];
+        temp += parseInt(num[i]);
     }
     resultado = temp / num.length;
     document.write("La media de los numeros es " + (temp /2));
@@ -176,8 +176,8 @@ function ocultar_vocales (texto){
     vocales = texto.split("");
     var frase = "";
     for(i = 0; i < vocales.length; i++){
-        if(vocales[i] === "a" && vocales[i] === "e" && vocales[i] === "i" && vocales[i] === "o" && vocales[i] === "u"){
-            frase += "@";
+        if(vocales[i] === "a" || vocales[i] === "e" || vocales[i] === "i" || vocales[i] === "o" || vocales[i] === "u"){
+            frase += "*";
         }else{
             frase += vocales[i];
         }

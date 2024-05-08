@@ -35,7 +35,65 @@
         <button onclick="mayor()">Mayor</button>
     </div>
     <hr>
+    <div class="f1">
+        <h2>Te digo el valor neto</h2>
+        <input type="number" id="n8" placeholder="Introduce el valor bruto">
+        <input type="number" id="n9" placeholder="Introduce el impuesto a deducir">
+        <button onclick="impuesto()">Neto</button>
+    </div>
+    <hr>
+    <div class="f1">
+        <h2>Te digo que siglo es según el año que me digas</h2>
+        <input type="number" id="n10" placeholder="Introduce el año">
+        <button onclick="siglo()">Siglo</button>
+    </div>
+    <hr>
+    <div class="f1">
+        <h2>Te digo que número es mayor de una lista de números</h2>
+        <input type="text" id="n11" placeholder="Introduce los números con un espacio de por medio">
+        <button onclick="grande()">Mayor</button>
+    </div>
+    <hr>
+        <div class="f1">
+        <h2>Te digo que número es mayor de una lista de números</h2>
+        <input type="text" id="n12" placeholder="Introduce los números con un espacio de por medio">
+        <button onclick="dia()">Día</button>
+    </div>
+    <hr>
+    <div class="f1">
+        <h2>Te digo todos los números hasta el que me digas</h2>
+        <input type="text" id="n13" placeholder="Introduce un número hasta el que contar">
+        <button onclick="array()">Contador</button>
+    </div>
+    <hr>
+    <div class="f1">
+        <h2>Te digo la suma de los números impares o pares</h2>
+        <input type="number" id="n14" placeholder="Introduce un número">
+        <input type="text" id="n15" placeholder="Escribe par o impar">
+        <button onclick="suma_pares_impares()">Par_o_Impar</button>
+    </div>
+    <hr>
+    <div class="f1">
+        <h2>Te digo los numeros pares o impares</h2>
+        <input type="number" id="n16" placeholder="Introduce un número">
+        <input type="text" id="n17" placeholder="Escribe par o impar">
+        <button onclick="imprime_paresoimpares()">Par_o_Impar</button>
+    </div>
+    <hr>
+    <div class="f1">
+        <h2>Te digo la media de todos los números que me digas</h2>
+        <input type="text" id="n18" placeholder="Introduce números separados por espacios">
+        <button onclick="media_aritmetica()">Media</button>
+    </div>
+    <hr>
+    <div class="f1">
+        <h2>Te digo el cuadrado de cada número</h2>
+        <input type="text" id="n19" placeholder="Introduce números separados por espacios">
+        <button onclick="cuadrado_array()">Cuadrado</button>
+    </div>
+    <hr>
     <script >
+        
     function suma(){
             var num1 = document.getElementById('n1').value;
             var num2 = document.getElementById('n2').value;
@@ -67,6 +125,158 @@
             alert("Los dos números son iguales")
         }else
             alert(num1 > num2? (num1 + " es mayor que " + num2) : (num2 + " es mayor que " + num1));
+}
+    function impuesto (){
+        var num1 = document.getElementById('n8').value;
+        var num2 = document.getElementById('n9').value;
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        var resultado = parseFloat(num1 * num2 / 100);
+        var neto = parseFloat(num1 - resultado);
+        alert("El precio neto es " + neto);
+    }
+    function siglo (){
+        var num1 = document.getElementById('n10').value;
+        num1 = parseFloat(num1);
+        var siglo = Math.ceil(num1 / 100);
+        if(num1 % 100 == 0){
+            siglo += 1;
+        }
+        alert("Es el siglo " + siglo);
+    }
+    function grande(){
+        var num1 = document.getElementById('n11').value;
+        var num = new Array;
+        num = num1.split(" ");
+        temp = num[0];
+        for(i = 0;i < num.length;i++){
+            if(temp < num[i]){
+                temp = num[i];
+            }
+        }
+        alert("El numero mas grande es " + temp);
+    }
+    function dia(){
+        var num1 = document.getElementById('n12').value;
+        num1 = parseInt(num1);
+        switch(num1){
+            case 1:
+                alert("El dia de la semana es Lunes");
+                break;
+            case 2:
+            alert("El dia de la semana es Martes");
+                break;
+            case 3:
+                alert("El dia de la semana es Miercoles");
+                break;
+            case 4:
+                alert("El dia de la semana es Jueves");
+                break;
+            case 5:
+                alert("El dia de la semana es Viernes");
+            break;
+            case 6:
+                alert("El dia de la semana es Sabado");
+                break;
+            case 7:
+                alert("El dia de la semana es Domingo");
+                break;
+            default:
+                alert("Numero fuera de rango");
+                break;
+    }
+}
+    function array(){
+        var num1 = document.getElementById('n13').value;
+        num1 = parseInt(num1);
+        let numeros = new Array(num1);
+        for(i = 0; i < numeros.length; i++){
+         numeros[i] = i +1;
+        }
+        alert(numeros);
+}  
+function suma_pares_impares(){
+    var num1 = document.getElementById('n14').value;
+    var num2 = document.getElementById('n15').value;
+        num1 = parseInt(num1);
+    var resultado = 0;
+    switch(num2){
+        case "par":
+            for(i = 0;i <= num1; i++){
+                if(i % 2 == 0){
+                    resultado += i;
+                }
+            }
+            alert("La suma de los numeros pares es " + resultado);
+            break;
+        case "impar":
+            for(i = 0;i <= num1; i++){
+                if(i % 2 != 0){
+                    resultado += i;
+                }
+            }
+            alert("La suma de los numeros impares es " + resultado);
+            break;
+        default:
+            alert("par o impar");
+            break;
+    }
+}
+function imprime_paresoimpares(){
+    var num1 = document.getElementById('n16').value;
+    var num2 = document.getElementById('n17').value;
+        num1 = parseInt(num1);
+    var sum = 0;
+    var resultado = "";
+    switch(num2){
+        case "par":
+            for(i = 0;i <= num1; i++){
+                if(i % 2 == 0){
+                    sum += i
+                    resultado += i;
+                    if (i < num1 - 1 && i != num1) {
+                        resultado += " + ";
+                    }
+                }
+            }
+            alert(resultado +" = " + sum);
+            break;
+        case "impar":
+            for(i = 0;i <= num1; i++){
+                if(i % 2 != 0){
+                    resultado += i;
+                    alert(i);
+                    if (i < num1 - 1 && i != num1) {
+                        alert(" + ");
+                    }
+                }
+            }
+            alert(" = " + resultado);
+            break;
+        default:
+            alert("par o impar");
+            break;
+    }
+}
+function media_aritmetica(){
+    var num1 = document.getElementById('n18').value;
+    var num = new Array;
+    num = num1.split(" ");
+    var temp = 0;
+    var resultado = 0;
+    for(i = 0; i < num.length;i++){
+        temp += parseInt(num[i]);
+    }
+    resultado = temp / num.length;
+    alert("La media de los numeros es " + (temp /2));
+}
+
+function cuadrado_array(){
+    var num1 = document.getElementById('n19').value;
+    var array = new Array;
+    array = num1.split(" ");
+    var cuadrados = array.map(array => array * array);
+    alert(cuadrados);
 }
     </script>
 </body>

@@ -20,6 +20,12 @@
         <button onclick="invertir()">Invertir</button>
     </div>
     <hr>
+    <div class="f1">
+        <h2>Oculto las vocales de tu frase</h2>
+        <input type="text" id="n3" placeholder="Introduce una frase">
+        <button onclick="ocultar_vocales()">Ocultar</button>
+    </div>
+    <hr>
     <script>
         function palabra(){
         var oracion = document.getElementById('n1').value;
@@ -41,6 +47,21 @@
         }
         alert(reverso);
         }
+        
+    function ocultar_vocales(){
+        var oracion = document.getElementById('n3').value;
+        var vocales = new Array;
+        vocales = oracion.split("");
+        var frase = "";
+        for(i = 0; i < vocales.length; i++){
+            if(vocales[i] === "a" || vocales[i] === "e" || vocales[i] === "i" || vocales[i] === "o" || vocales[i] === "u"){
+                frase += "";
+            }else{
+                frase += vocales[i];
+            }   
+        }
+        alert(frase);
+}
     </script>
 </body>
 </html>
