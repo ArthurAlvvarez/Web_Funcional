@@ -2,12 +2,11 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 15vh;
-    height: 97vh;
+    height: 77vh;
     background: url(luna.png) no-repeat;
     background-size: cover;
 }
 .fondo{
-    margin-top: 80px;
     width: 400px;
     height: 500px;
     background: url(form.jpg) no-repeat;

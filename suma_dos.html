@@ -92,6 +92,14 @@
         <button onclick="cuadrado_array()">Cuadrado</button>
     </div>
     <hr>
+    <div class="f1">
+        <h2>Operaciones con arrays</h2>
+        <input type="text" id="n20" placeholder="Introduce numeros separados por espacios">
+        <input type="text" id="n21" placeholder="Introduce tantos numeros como hayas introducido antes">
+        <input type="text" id="n22" placeholder="Introduce + - * /">
+        <button onclick="operaciones()">Operaciones</button>
+    </div>
+    <hr>
     <script >
         
     function suma(){
@@ -277,6 +285,45 @@ function cuadrado_array(){
     array = num1.split(" ");
     var cuadrados = array.map(array => array * array);
     alert(cuadrados);
+}
+function operaciones(){
+    var num1 = document.getElementById('n20').value;
+    var num2 = document.getElementById('n21').value;
+    var num3 = document.getElementById('n22').value;
+    var array1 = new Array;
+    array1 = num1.split(" ");
+    var array2 = new Array;
+    array2 = num2.split(" ");
+    var array3 = new Array;
+    switch(num3){
+        case '+':
+            for(i = 0; i < array1.length; i++){
+                array3[i] = parseInt(parseInt(array1[i])  + parseInt(array2[i]) );
+            }
+            alert(array3);
+            break;
+        case '-':
+            for(i = 0; i < array1.length; i++){
+                array3[i] = parseFloat(array1[i] - array2[i]);
+            }
+            alert(array3);
+            break;
+        case '*':
+            for(i = 0; i < array1.length; i++){
+                array3[i] = parseFloat(array1[i] * array2[i]);
+            }
+            alert(array3);
+            break;
+        case '/':
+            for(i = 0; i < array1.length; i++){
+                array3[i] = parseFloat(array1[i] / array2[i]);
+            }
+            alert(array3);
+            break;
+        default:
+            alert('Aquí no hacemos eso');
+            break;
+    }
 }
     </script>
 </body>
