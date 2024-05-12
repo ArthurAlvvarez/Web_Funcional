@@ -25,43 +25,6 @@
         <input type="text" id="n3" placeholder="Introduce una frase">
         <button onclick="ocultar_vocales()">Ocultar</button>
     </div>
-    <hr>
-    <script>
-        function palabra(){
-        var oracion = document.getElementById('n1').value;
-        let palabras = new Array;
-        let palabraslargas = new Array;
-        palabras = oracion.split(" ");
-        for(i = 0; i < palabras.length; i++){
-            if(palabras[i].length >= 3)
-                palabraslargas.push(palabras[i]);
-        }
-        alert(palabraslargas);
-        }
-
-        function invertir(){
-            var oracion = document.getElementById('n2').value;
-            let reverso = "";
-            for(i = oracion.length; i >= 0; i--){
-            reverso += oracion.charAt(i);
-        }
-        alert(reverso);
-        }
-        
-    function ocultar_vocales(){
-        var oracion = document.getElementById('n3').value;
-        var vocales = new Array;
-        vocales = oracion.split("");
-        var frase = "";
-        for(i = 0; i < vocales.length; i++){
-            if(vocales[i] === "a" || vocales[i] === "e" || vocales[i] === "i" || vocales[i] === "o" || vocales[i] === "u"){
-                frase += "";
-            }else{
-                frase += vocales[i];
-            }   
-        }
-        alert(frase);
-}
-    </script>
+<script src="funciones.js"></script>
 </body>
 </html>
